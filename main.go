@@ -73,7 +73,7 @@ func validateAPIKeyHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	var err error
-	client, err = mongo.NewClient(options.Client().ApplyURI("mongodb://todoUser:thealtimytetoduupasd@13.233.137.8:27017/todo"))
+	client, err = mongo.NewClient(options.Client().ApplyURI("mongodb://todoadm:todoadm@54.208.42.87/todo"))
 	if err != nil {
 		log.Fatal(err)
 	}
