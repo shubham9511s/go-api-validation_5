@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-1-deployment
+  namespace: todo
+  labels:
+    app: go-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-1
+  template:
+    metadata:
+      labels:
+        app: go-1
+    spec:
+      containers:
+      - name: go-1
+        image: shubhamshinde2206/go-1:tag
+        ports:
+        - containerPort: 9090
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-1-service
+spec:
+  selector:
+    app: go-1
+  ports:
+    - protocol: TCP
+      port: 9090
+      targetPort: 9090
