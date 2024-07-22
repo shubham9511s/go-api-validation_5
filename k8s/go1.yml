@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: go-1
-        image: shubhamshinde2206/go-1:tag
+        image: shubhamshinde2206/go-1:10040251352
         ports:
         - containerPort: 9090
 
