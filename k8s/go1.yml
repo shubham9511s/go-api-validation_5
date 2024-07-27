@@ -27,6 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: go-1-service
+  namespace: todo
 spec:
   type: ClusterIP 
   selector:
