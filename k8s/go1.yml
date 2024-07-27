@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: go-1-service
 spec:
-  type: NodePort
+  type: ClusterIP 
   selector:
     app: go-1
   ports:
